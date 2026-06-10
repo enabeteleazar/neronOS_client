@@ -69,11 +69,9 @@ export function useNeron(): UseNeronReturn {
         // 2. Création de session
         await rpc("session.new", {
           session_id: sessionIdRef.current,
-          system:
-            "Tu es Néron, un assistant IA local. Tu réponds en français.",
         });
       } catch (err) {
-        console.error("[Néron] erreur init session :", err);
+        console.error("[assistant] erreur init session :", err);
       }
     };
 
